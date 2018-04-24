@@ -10,11 +10,10 @@ main(void) {
 
   while ((len = getaline(line, MAXLINE)) >0) {
     reverse(line);
-    printf("%s\n", line);
+    printf("%s\n",line);
   }
 
 }
-
 
 void reverse(char line[]) 
 {
