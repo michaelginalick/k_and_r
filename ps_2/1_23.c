@@ -1,8 +1,9 @@
 #include <stdio.h>
-#define MAXLENGTH 100
 
 void checkcomment(int c);
 void incomment();
+void insinglecomment();
+void echo_quote(int c);
 
 int
 main(void) 
@@ -24,15 +25,15 @@ void checkcomment(int c)
     d = getchar();
 
     if (d == '*')
-      incomment(p);
+      incomment();
+    else if (d == '/' && c == '/')
+      insinglecomment();
     else if( d == '/' )
-      incomment(p);
+      checkcomment(p);
   }
-  else 
+  else
     putchar(c);
-
 }
-
 
 void incomment()
 {
@@ -42,7 +43,16 @@ void incomment()
 
   while(c !='*' || d !='/')
   {
-      c = d;
-      d = getchar();
+    c = d;
+    d = getchar();
+  }
+
+}
+
+void insinglecomment()
+{
+  int c;
+  while (c != '\n') {
+    c = getchar();
   }
 }
