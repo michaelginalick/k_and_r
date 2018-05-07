@@ -3,8 +3,8 @@
 #define OPENPAREN '('
 #define CLOSINGBRACE '}'
 #define CLOSINGPAREN ')'
-// #define DOUBLEQUOTE ' " '
-#define OPENBRACKET '['
+#define DOUBLEQUOTE ' " ' //cant define single or double quotes
+#define OPENBRACKET '['   //1_24.c:26:13: warning: multi-character character constant [-Wmultichar]
 #define CLOSINGBRAKET ']'
 
 int
@@ -23,8 +23,8 @@ main(void)
     if ( OB < 0 )
       return printf("brace mismatch \n");
     
-    // if(c == DOUBLEQUOTE)
-    //   DQ++;
+    if(c == DOUBLEQUOTE)
+      DQ++;
     
     if(c == OPENBRACKET)
       OBRA += 1;
