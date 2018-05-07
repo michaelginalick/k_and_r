@@ -23,8 +23,8 @@ main(void)
     if ( OB < 0 )
       return printf("brace mismatch \n");
     
-    if(c == DOUBLEQUOTE)
-      DQ++;
+    // if(c == DOUBLEQUOTE)
+    //   DQ++;
     
     if(c == OPENBRACKET)
       OBRA += 1;
